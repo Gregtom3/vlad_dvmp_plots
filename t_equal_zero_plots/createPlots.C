@@ -2,7 +2,14 @@ void editHist(TH1F *h, TString title, TString xaxis, TString yaxis, double lineW
 
 int createPlots()
 {
-  TString inputDir = "/sphenix/user/gregtom3/ephenix-sbu/analysis/gregory_matousek/vlad_dvmp_but_fast/t_equal_zero_plots/100M_test";
+  // ********* USE THIS FOR FIGURES 1, 3, 4, 5, 6 ********** // 
+  //TString inputDir = "/sphenix/user/gregtom3/ephenix-sbu/analysis/gregory_matousek/vlad_dvmp_but_fast/t_equal_zero_plots/100M_test";
+  // ******************************************************* //
+
+  // ********* USE THIS FOR FIGURE 2 ********* // 
+  TString inputDir = "/sphenix/user/gregtom3/ephenix-sbu/analysis/gregory_matousek/vlad_dvmp_but_fast/t_equal_zero_plots/100M_test_figure2";
+  // ******************************************************* //
+
   TString outputDir = "./plots";
  
   int numFigure = 6; // 1, 2, 3, 4, 5 or 6
