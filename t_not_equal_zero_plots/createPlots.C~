@@ -5,10 +5,10 @@ void editHist(TH1F *h, double lineWidth, Int_t lineStyle, Color_t lineColor, dou
 
 int createPlots()
 {
-  // double tmin = -0.004; double tmax = -0.003;
-  // double tmin = -0.007; double tmax = -0.006;
-  //    double tmin = -0.010; double tmax = -0.009;
-   double tmin = -0.013; double tmax = -0.012;
+  double tmin = -0.0004; double tmax = -0.003;
+  //  double tmin = -0.0007; double tmax = -0.006;
+  //  double tmin = -0.0010; double tmax = -0.009;
+  //  double tmin = -0.0013; double tmax = -0.012;
   //-------------------------------------------
   // Parameters
   //-------------------------------------------
@@ -75,7 +75,7 @@ int createPlots()
   TPaveText *pt1 = new TPaveText(5,0,20,0.4);
   pt1->AddText("Simulations from Sartre 1.33");
   pt1->AddText(Form("Detector smearing based on %s",smearSystem.Data()));
-  //  pt1->AddText(Form("Integrated Luminosity = %dfb^{-1}/A",lumi));
+  pt1->AddText(Form("Integrated Luminosity = %dfb^{-1}/A",lumi));
   pt1->AddText("IPSat #gamma^{*} + A -> #phi + A");
   pt1->AddText(Form("%0.3f < |t| < %0.3f",-tmax,-tmin));
   pt1->SetFillStyle(0);
@@ -142,7 +142,7 @@ int createPlots()
   TPaveText *pt2 = new TPaveText(5,32,1.4,1.95);
   pt2->AddText("Simulations from Sartre 1.33");
   pt2->AddText(Form("Detector smearing based on %s",smearSystem.Data()));
-  //  pt2->AddText(Form("Integrated Luminosity = %dfb^{-1}/A",lumi));
+  pt2->AddText(Form("Integrated Luminosity = %dfb^{-1}/A",lumi));
   pt2->AddText("IPSat #gamma^{*} + A -> #phi + A");
   pt2->AddText(Form("%0.3f < |t| < %0.3f",-tmax,-tmin));
   pt2->SetFillStyle(0);
@@ -209,7 +209,7 @@ int createPlots()
   TPaveText *pt3 = new TPaveText(5,32,1.4,1.95);
   pt3->AddText("Simulations from Sartre 1.33");
   pt3->AddText(Form("Detector smearing based on %s",smearSystem.Data()));
-  //  pt3->AddText(Form("Integrated Luminosity = %dfb^{-1}/A",lumi));
+  pt3->AddText(Form("Integrated Luminosity = %dfb^{-1}/A",lumi));
   pt3->AddText("IPSat #gamma^{*} + A -> J/#Psi + A");
   pt3->AddText(Form("%0.3f < |t| < %0.3f",-tmax,-tmin));
   pt3->SetFillStyle(0);
@@ -248,18 +248,18 @@ int createPlots()
   TH1F *h4L_eAu_ep  = (TH1F*)F1L_xpomlow->Get("h_divide_eAu_ep_JPsi_ee_bSat_F1L_xpomlow");
   TH1F *h4T_eAu_eCa = (TH1F*)F1T_xpomlow->Get("h_divide_eAu_eCa_JPsi_ee_bSat_F1T_xpomlow");
   TH1F *h4T_eAu_ep  = (TH1F*)F1T_xpomlow->Get("h_divide_eAu_ep_JPsi_ee_bSat_F1T_xpomlow");
-  editHist(h4L_eAu_eCa,1,1,kBlue,1,fullCircle,kBlue,false);
-  editHist(h4L_eAu_ep,1,1,kBlue,2,fullDiamond,kBlue,false);
-  editHist(h4T_eAu_eCa,1,1,kBlack,1,fullCircle,kBlack,false);
-  editHist(h4T_eAu_ep,1,1,kBlack,2,fullDiamond,kBlack,false);
+  editHist(h4L_eAu_eCa,1,1,kBlue,1,openCircle,kBlue,false);
+  editHist(h4L_eAu_ep,1,1,kBlue,2,openDiamond,kBlue,false);
+  editHist(h4T_eAu_eCa,1,1,kBlack,1,openCircle,kBlack,false);
+  editHist(h4T_eAu_ep,1,1,kBlack,2,openDiamond,kBlack,false);
  
   TH1F *h4[4];
   for(int i = 0 ; i < 4 ; i++)
     h4[i]=new TH1F();
-  editHist(h4[0],1,1,kBlue,2,fullCircle,kBlue,false);
-  editHist(h4[1],1,1,kBlue,3,fullDiamond,kBlue,false);
-  editHist(h4[2],1,1,kBlack,2,fullCircle,kBlack,false);
-  editHist(h4[3],1,1,kBlack,3,fullDiamond,kBlack,false);
+  editHist(h4[0],1,1,kBlue,2,openCircle,kBlue,false);
+  editHist(h4[1],1,1,kBlue,3,openDiamond,kBlue,false);
+  editHist(h4[2],1,1,kBlack,2,openCircle,kBlack,false);
+  editHist(h4[3],1,1,kBlack,3,openDiamond,kBlack,false);
   
   TString lt4[4]; // Legend text
   lt4[0] = "J/#Psi (T) , A=197/A=40, low x_{#lower[-0.25]{#Rho}}";
@@ -277,7 +277,7 @@ int createPlots()
   TPaveText *pt4 = new TPaveText(5,32,1.4,1.95);
   pt4->AddText("Simulations from Sartre 1.33");
   pt4->AddText(Form("Detector smearing based on %s",smearSystem.Data()));
-  //  pt4->AddText(Form("Integrated Luminosity = %dfb^{-1}/A",lumi));
+  pt4->AddText(Form("Integrated Luminosity = %dfb^{-1}/A",lumi));
   pt4->AddText("IPSat #gamma^{*} + A -> J/#Psi + A");
   pt4->AddText(Form("%0.3f < |t| < %0.3f",-tmax,-tmin));
   pt4->SetFillStyle(0);
@@ -319,22 +319,22 @@ int createPlots()
   TH1F *h5_eAu_Phi = (TH1F*)F3_xpomhigh->Get("h_tScale_eAu_Phi_kaon_bSat_F3_xpomhigh");
   TH1F *h5_eCa_Phi = (TH1F*)F3_xpomhigh->Get("h_tScale_eCa_Phi_kaon_bSat_F3_xpomhigh");
   TH1F *h5_ep_Phi = (TH1F*)F3_xpomhigh->Get("h_tScale_ep_Phi_kaon_bSat_F3_xpomhigh");
-  editHist(h5_eAu_JPsi,1,1,kBlack,1,openSquare,kBlack,true);
-  editHist(h5_eCa_JPsi,1,1,kBlack,1,openCircle,kBlack,true);
-  editHist(h5_ep_JPsi,1,1,kBlack,2,openDiamond,kBlack,true);
-  editHist(h5_eAu_Phi,1,1,kBlue,1,openSquare,kBlue,true);
-  editHist(h5_eCa_Phi,1,1,kBlue,1,openCircle,kBlue,true);
-  editHist(h5_ep_Phi,1,1,kBlue,2,openDiamond,kBlue,true);
+  editHist(h5_eAu_JPsi,1,1,kBlack,1,fullSquare,kBlack,true);
+  editHist(h5_eCa_JPsi,1,1,kBlack,1,fullCircle,kBlack,true);
+  editHist(h5_ep_JPsi,1,1,kBlack,2,fullDiamond,kBlack,true);
+  editHist(h5_eAu_Phi,1,1,kBlue,1,fullSquare,kBlue,true);
+  editHist(h5_eCa_Phi,1,1,kBlue,1,fullCircle,kBlue,true);
+  editHist(h5_ep_Phi,1,1,kBlue,2,fullDiamond,kBlue,true);
  
   TH1F *h5[6];
   for(int i = 0 ; i < 6 ; i++)
     h5[i]=new TH1F();
-  editHist(h5[0],1,1,kBlack,2,openSquare,kBlack,true);
-  editHist(h5[1],1,1,kBlack,2,openCircle,kBlack,true);
-  editHist(h5[2],1,1,kBlack,3,openDiamond,kBlack,true);
-  editHist(h5[3],1,1,kBlue,2,openSquare,kBlue,true);
-  editHist(h5[4],1,1,kBlue,2,openCircle,kBlue,true);
-  editHist(h5[5],1,1,kBlue,3,openDiamond,kBlue,true);
+  editHist(h5[0],1,1,kBlack,2,fullSquare,kBlack,true);
+  editHist(h5[1],1,1,kBlack,2,fullCircle,kBlack,true);
+  editHist(h5[2],1,1,kBlack,3,fullDiamond,kBlack,true);
+  editHist(h5[3],1,1,kBlue,2,fullSquare,kBlue,true);
+  editHist(h5[4],1,1,kBlue,2,fullCircle,kBlue,true);
+  editHist(h5[5],1,1,kBlue,3,fullDiamond,kBlue,true);
  
   TString lt5[6]; // Legend text
   lt5[0] = "#phi (L) , A=197";
@@ -357,7 +357,7 @@ int createPlots()
   TPaveText *pt5 = new TPaveText(5,32,1.4,1.95);
   pt5->AddText("Simulations from Sartre 1.33");
   pt5->AddText(Form("Detector smearing based on %s",smearSystem.Data()));
-  //  pt5->AddText(Form("Integrated Luminosity = %dfb^{-1}/A",lumi));
+  pt5->AddText(Form("Integrated Luminosity = %dfb^{-1}/A",lumi));
   pt5->AddText("IPSat #gamma^{*} + A -> V + A");
   pt5->AddText(Form("%0.3f < |t| < %0.3f",-tmax,-tmin));
   pt5->SetFillStyle(0);
@@ -401,22 +401,22 @@ int createPlots()
   TH1F *h6_eAu_Phi = (TH1F*)F3_xpomlow->Get("h_tScale_eAu_Phi_kaon_bSat_F3_xpomlow");
   TH1F *h6_eCa_Phi = (TH1F*)F3_xpomlow->Get("h_tScale_eCa_Phi_kaon_bSat_F3_xpomlow");
   TH1F *h6_ep_Phi = (TH1F*)F3_xpomlow->Get("h_tScale_ep_Phi_kaon_bSat_F3_xpomlow");
-  editHist(h6_eAu_JPsi,1,1,kBlack,1,fullSquare,kBlack,true);
-  editHist(h6_eCa_JPsi,1,1,kBlack,1,fullCircle,kBlack,true);
-  editHist(h6_ep_JPsi,1,1,kBlack,2,fullDiamond,kBlack,true);
-  editHist(h6_eAu_Phi,1,1,kBlue,1,fullSquare,kBlue,true);
-  editHist(h6_eCa_Phi,1,1,kBlue,1,fullCircle,kBlue,true);
-  editHist(h6_ep_Phi,1,1,kBlue,2,fullDiamond,kBlue,true);
+  editHist(h6_eAu_JPsi,1,1,kBlack,1,openSquare,kBlack,true);
+  editHist(h6_eCa_JPsi,1,1,kBlack,1,openCircle,kBlack,true);
+  editHist(h6_ep_JPsi,1,1,kBlack,2,openDiamond,kBlack,true);
+  editHist(h6_eAu_Phi,1,1,kBlue,1,openSquare,kBlue,true);
+  editHist(h6_eCa_Phi,1,1,kBlue,1,openCircle,kBlue,true);
+  editHist(h6_ep_Phi,1,1,kBlue,2,openDiamond,kBlue,true);
  
   TH1F *h6[6];
   for(int i = 0 ; i < 6 ; i++)
     h6[i]=new TH1F();
-  editHist(h6[0],1,1,kBlack,2,fullSquare,kBlack,true);
-  editHist(h6[1],1,1,kBlack,2,fullCircle,kBlack,true);
-  editHist(h6[2],1,1,kBlack,3,fullDiamond,kBlack,true);
-  editHist(h6[3],1,1,kBlue,2,fullSquare,kBlue,true);
-  editHist(h6[4],1,1,kBlue,2,fullCircle,kBlue,true);
-  editHist(h6[5],1,1,kBlue,3,fullDiamond,kBlue,true);
+  editHist(h6[0],1,1,kBlack,2,openSquare,kBlack,true);
+  editHist(h6[1],1,1,kBlack,2,openCircle,kBlack,true);
+  editHist(h6[2],1,1,kBlack,3,openDiamond,kBlack,true);
+  editHist(h6[3],1,1,kBlue,2,openSquare,kBlue,true);
+  editHist(h6[4],1,1,kBlue,2,openCircle,kBlue,true);
+  editHist(h6[5],1,1,kBlue,3,openDiamond,kBlue,true);
  
   TString lt6[6]; // Legend text
   lt6[0] = "#phi (L) , A=197";
@@ -439,7 +439,7 @@ int createPlots()
   TPaveText *pt6 = new TPaveText(5,32,1.4,1.95);
   pt6->AddText("Simulations from Sartre 1.33");
   pt6->AddText(Form("Detector smearing based on %s",smearSystem.Data()));
-  //  pt6->AddText(Form("Integrated Luminosity = %dfb^{-1}/A",lumi));
+  pt6->AddText(Form("Integrated Luminosity = %dfb^{-1}/A",lumi));
   pt6->AddText("IPSat #gamma^{*} + A -> V + A");
   pt6->AddText(Form("%0.3f < |t| < %0.3f",-tmax,-tmin));
   pt6->SetFillStyle(0);

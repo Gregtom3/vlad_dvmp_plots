@@ -3,7 +3,7 @@ int whitepaperplot()
   int N = 100000000;
   double lumi = 10; // fb^-1
   double lumi_save = lumi;
-  int tsave = 1; // %-age  (0 -> 0.01 | 1 -> 0.05 | 2 -> 0.1 | 3 -> 0.2 | 4 -> Method L
+  int tsave = 3; // %-age  (0 -> 0.01 | 1 -> 0.05 | 2 -> 0.1 | 3 -> 0.2 | 4 -> Method L
 
 
 
