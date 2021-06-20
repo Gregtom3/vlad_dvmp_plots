@@ -3,16 +3,16 @@ void editHist(TH1F *h, TString title, TString xaxis, TString yaxis, double lineW
 int createPlots()
 {
   // ********* USE THIS FOR FIGURES 1, 3, 4, 5, 6 ********** // 
-  TString inputDir = "/sphenix/user/gregtom3/ephenix-sbu/analysis/gregory_matousek/vlad_dvmp_but_fast/t_equal_zero_plots/100M_test";
+  //TString inputDir = "/sphenix/user/gregtom3/ephenix-sbu/analysis/gregory_matousek/vlad_dvmp_but_fast/t_equal_zero_plots/100M_test";
   // ******************************************************* //
 
   // ********* USE THIS FOR FIGURE 2 ********* // 
-  //TString inputDir = "/sphenix/user/gregtom3/ephenix-sbu/analysis/gregory_matousek/vlad_dvmp_but_fast/t_equal_zero_plots/100M_test_figure2";
+   TString inputDir = "/sphenix/user/gregtom3/ephenix-sbu/analysis/gregory_matousek/vlad_dvmp_but_fast/t_equal_zero_plots/100M_test_figure2";
   // ******************************************************* //
 
   TString outputDir = "./plots";
  
-  int numFigure = 6; // 1, 2, 3, 4, 5 or 6
+  int numFigure = 2; // 1, 2, 3, 4, 5 or 6
 
   // If 1 or 2 is selected, then pick either {vm, decay} = {1,1} or {3,2}
   // If 3,4,5,6 is selected, the below options do not matter
@@ -219,7 +219,7 @@ int createPlots()
       if(numFigure==1)
 	ylabel = "A_{1}^{-2}d#sigma^{A_{1}}/dt/A_{2}^{-2}d#sigma^{A_{2}}/dt";
       else
-	ylabel = "A_{1}^{-2}#sigma^{A_{1}}/A_{2}^{-2}#sigma^{A_{2}}";
+	ylabel = "A_{1}^{-4/3}#sigma^{A_{1}}/A_{2}^{-4/3}#sigma^{A_{2}}";
   
       for(int i = 0 ; i < 4; i++)
 	{
@@ -415,13 +415,13 @@ int createPlots()
 				"bNonSat","bNonSat","bNonSat",
 				"bNonSat","bNonSat","bNonSat"};
       TString figureString = Form("F%d",numFigure);
-      double markers_xlow[15] = {25,25,25,
+      double markers_xhigh[15] = {25,25,25,
 				 24,24,24,
 				 27,27,27,
 				 25,25,25,
 				 27,27,27};
 
-      double markers_xhigh[15] = {21,21,21,
+      double markers_xlow[15] = {21,21,21,
 				 20,20,20,
 				 33,33,33,
 				 21,21,21,

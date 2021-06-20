@@ -7,7 +7,7 @@ int createPlots()
 {
   // double tmin = -0.004; double tmax = -0.003;
   // double tmin = -0.007; double tmax = -0.006;
-  //    double tmin = -0.010; double tmax = -0.009;
+  //   double tmin = -0.010; double tmax = -0.009;
    double tmin = -0.013; double tmax = -0.012;
   //-------------------------------------------
   // Parameters
@@ -60,10 +60,10 @@ int createPlots()
   editHist(h1[3],1,1,kBlack,3,openDiamond,kBlack,false);
   
   TString lt1[4]; // Legend text
-  lt1[0] = "#phi (T) , A=197/A=40, high x_{#lower[-0.25]{#Rho}}";
-  lt1[1] = "#phi (L) , A=197/A=40, high x_{#lower[-0.25]{#Rho}}";
-  lt1[2] = "#phi (T) , A=197/A=1, high x_{#lower[-0.25]{#Rho}}";
-  lt1[3] = "#phi (L) , A=197/A=1, high x_{#lower[-0.25]{#Rho}}";
+  lt1[0] = "#phi (T) , A=197/A=40";//, high x_{#lower[-0.25]{#Rho}}";
+  lt1[1] = "#phi (L) , A=197/A=40";//, high x_{#lower[-0.25]{#Rho}}";
+  lt1[2] = "#phi (T) , A=197/A=1";//, high x_{#lower[-0.25]{#Rho}}";
+  lt1[3] = "#phi (L) , A=197/A=1";//, high x_{#lower[-0.25]{#Rho}}";
   
   TLegend *l1 = new TLegend(0.12,0.9,0.9,0.99);
   l1->SetNColumns(2);
@@ -127,10 +127,10 @@ int createPlots()
   editHist(h2[3],1,1,kBlack,3,fullDiamond,kBlack,false);
   
   TString lt2[4]; // Legend text
-  lt2[0] = "#phi (T) , A=197/A=40, low x_{#lower[-0.25]{#Rho}}";
-  lt2[1] = "#phi (L) , A=197/A=40, low x_{#lower[-0.25]{#Rho}}";
-  lt2[2] = "#phi (T) , A=197/A=1, low x_{#lower[-0.25]{#Rho}}";
-  lt2[3] = "#phi (L) , A=197/A=1, low x_{#lower[-0.25]{#Rho}}";
+  lt2[0] = "#phi (T) , A=197/A=40";//, low x_{#lower[-0.25]{#Rho}}";
+  lt2[1] = "#phi (L) , A=197/A=40";//, low x_{#lower[-0.25]{#Rho}}";
+  lt2[2] = "#phi (T) , A=197/A=1";//, low x_{#lower[-0.25]{#Rho}}";
+  lt2[3] = "#phi (L) , A=197/A=1";//, low x_{#lower[-0.25]{#Rho}}";
   
   TLegend *l2 = new TLegend(0.12,0.9,0.9,0.99);
   l2->SetNColumns(2);
@@ -194,10 +194,10 @@ int createPlots()
   editHist(h3[3],1,1,kBlack,3,openDiamond,kBlack,false);
   
   TString lt3[4]; // Legend text
-  lt3[0] = "J/#Psi (T) , A=197/A=40, high x_{#lower[-0.25]{#Rho}}";
-  lt3[1] = "J/#Psi (L) , A=197/A=40, high x_{#lower[-0.25]{#Rho}}";
-  lt3[2] = "J/#Psi (T) , A=197/A=1, high x_{#lower[-0.25]{#Rho}}";
-  lt3[3] = "J/#Psi (L) , A=197/A=1, high x_{#lower[-0.25]{#Rho}}";
+  lt3[0] = "J/#Psi (T) , A=197/A=40";//, high x_{#lower[-0.25]{#Rho}}";
+  lt3[1] = "J/#Psi (L) , A=197/A=40";//, high x_{#lower[-0.25]{#Rho}}";
+  lt3[2] = "J/#Psi (T) , A=197/A=1";//, high x_{#lower[-0.25]{#Rho}}";
+  lt3[3] = "J/#Psi (L) , A=197/A=1";//, high x_{#lower[-0.25]{#Rho}}";
   
   TLegend *l3 = new TLegend(0.12,0.9,0.9,0.99);
   l3->SetNColumns(2);
@@ -262,10 +262,10 @@ int createPlots()
   editHist(h4[3],1,1,kBlack,3,fullDiamond,kBlack,false);
   
   TString lt4[4]; // Legend text
-  lt4[0] = "J/#Psi (T) , A=197/A=40, low x_{#lower[-0.25]{#Rho}}";
-  lt4[1] = "J/#Psi (L) , A=197/A=40, low x_{#lower[-0.25]{#Rho}}";
-  lt4[2] = "J/#Psi (T) , A=197/A=1, low x_{#lower[-0.25]{#Rho}}";
-  lt4[3] = "J/#Psi (L) , A=197/A=1, low x_{#lower[-0.25]{#Rho}}";
+  lt4[0] = "J/#Psi (T) , A=197/A=40";//, low x_{#lower[-0.25]{#Rho}}";
+  lt4[1] = "J/#Psi (L) , A=197/A=40";//, low x_{#lower[-0.25]{#Rho}}";
+  lt4[2] = "J/#Psi (T) , A=197/A=1";//, low x_{#lower[-0.25]{#Rho}}";
+  lt4[3] = "J/#Psi (L) , A=197/A=1";//, low x_{#lower[-0.25]{#Rho}}";
   
   TLegend *l4 = new TLegend(0.12,0.9,0.9,0.99);
   l4->SetNColumns(2);
