@@ -15,8 +15,8 @@ Within this repository, there are four separate main directories. These are, alo
 - **./t_not_equal_zero_plots**
   - Similar to *./t_equal_zero_plots*, this directory simply creates figures for the t-scaling plots in Figures 10-13.
 
-- **./whitepaper/**
-  - This directory's structure is similar to the above, but in this case the *./data* folder's histograms are stored in such a way to make the Whitepaper plots simple to produce (using the whitepaperplot.C script)
+- **./YellowReport_plots/**
+  - This directory's structure is similar to the above, but in this case the *./data* folder's histograms are stored in such a way to make the plots in figures 3-4. The *./data* directory contains *.root* files created by the *sartreWhitepaper.cpp* program. The *./has_truth_data* directory is identical to *./data*, with the subtle difference that histograms containing the suffix *_0* in their TObject name have no smearing whatsoever (hence they are used for Monte Carlo comparison). The directory *./newplots* is where figure 4 is generated (using the true_whitepaperplot.C script), and *./plots* is where figure 3 is generated (using the whitepaperplot.C script).
   
 If you have any questions about the workings of these macros, how the data is generated, or how to compile the source code, feel free to contact me at my email (gregory.matousek@duke.edu)
 
