@@ -1,4 +1,4 @@
-# vlad_dvmp_plots
+# Analysis codes, data files and plotting scripts for the paper arXiv:2202.05981 [nucl-th]
 ---
 This repository contains the source code and data for the paper titled "Scaling properties of exclusive vector meson production cross section from gluon saturation". The usage of several of these macros, in particular the source code, depends on a correctly built version of Sartre 1.33, available online at https://sartre.hepforge.org/
 
